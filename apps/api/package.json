@@ -1,5 +1,5 @@
 {
-  "name": "dt-money-backend",
+  "name": "api",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,8 +7,8 @@
     "dev": "tsx watch src/server.ts",
     "start": "ts-node src/index.ts",
     "typeorm": "typeorm-ts-node-commonjs",
-    "migration:run": "npx ts-node ./node_modules/typeorm/cli.js migration:run -d src/infra/database/typeorm/dt-money/data-source.ts",
-    "migration:revert": "npx ts-node ./node_modules/typeorm/cli.js migration:revert -d src/infra/database/typeorm/dt-money/data-source.ts"
+    "migration:run": "pnpm exec typeorm-ts-node-commonjs migration:run -d src/infra/database/typeorm/dt-money/data-source.ts",
+    "migration:revert": "pnpm exec typeorm-ts-node-commonjs migration:revert -d src/infra/database/typeorm/dt-money/data-source.ts"
   },
   "keywords": [],
   "author": "",
